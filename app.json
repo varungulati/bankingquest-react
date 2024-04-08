@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "bankingquest-react",
-    "slug": "bankingquest-react",
+    "slug": "banking-quest",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "40edd05f-4797-46c0-a664-45a0e3de8aa2"
+      }
+    },
+    "owner": "varungulati"
   }
 }
