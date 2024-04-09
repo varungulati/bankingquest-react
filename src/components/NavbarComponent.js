@@ -10,7 +10,7 @@ function NavbarComponent() {
       <Container>
         <Navbar.Brand href="#home">
           <img
-              src="/assets/logo.png"
+              src="/public/assets/images/logo.png"
               width="130"
               height="40"
               className="d-inline-block align-top me-lg-2"

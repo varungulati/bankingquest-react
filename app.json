@@ -34,6 +34,12 @@
         "projectId": "40edd05f-4797-46c0-a664-45a0e3de8aa2"
       }
     },
-    "owner": "varungulati"
+    "owner": "varungulati",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/40edd05f-4797-46c0-a664-45a0e3de8aa2"
+    }
   }
 }
