@@ -22,19 +22,16 @@ function NavbarComponent() {
             <Nav className="me-auto container">
               <NavDropdown className="ps-2" title="Courses"
                            id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Course 1</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Course 2</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Course 3</NavDropdown.Item>
+                <Link href="/blog/1" className="dropdown-item">Course 1</Link>
+                <Link href="/blog/1" className="dropdown-item">Course 2</Link>
+                <Link href="/blog/1" className="dropdown-item">Course 3</Link>
                 <NavDropdown.Divider/>
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
+                <Link href="/blog/1" className="dropdown-item">Course 4</Link>
               </NavDropdown>
-              <Nav.Link className="ps-2" href="#events">Events</Nav.Link>
-              <Nav.Link className="ps-2" href="#testSeries">Test
-                Series</Nav.Link>
+              <Link href="/blog/1" className="ps-2 nav-link">Events</Link>
+              <Link href="/blog/1" className="ps-2 nav-link">Test Series</Link>
               <Link href="/blog/1" className="ps-2 nav-link">Blogs</Link>
-              <Nav.Link className="ps-2" href="#tutorials">Tutorials</Nav.Link>
+              <Link href="/blog/1" className="ps-2 nav-link">Tutorials</Link>
             </Nav>
             <div className="col-md-1 px-2 col-xs-12 pb-2 pb-md-0">
               <LoginButton/>
