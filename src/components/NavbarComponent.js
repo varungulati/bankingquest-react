@@ -4,13 +4,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import LoginButton from "./LoginButton";
 import RegisterButton from "./RegisterButton";
 import Logo from "./Logo";
+import { Link } from 'expo-router';
 
 function NavbarComponent() {
   return (
       <div className="col-xs-12 col-md-12 row">
         <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
           <div className="col-xs-8 col-md-1 ms-2">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
               <Logo/>
             </Navbar.Brand>
           </div>
@@ -32,7 +33,7 @@ function NavbarComponent() {
               <Nav.Link className="ps-2" href="#events">Events</Nav.Link>
               <Nav.Link className="ps-2" href="#testSeries">Test
                 Series</Nav.Link>
-              <Nav.Link className="ps-2" href="#blogs">Blogs</Nav.Link>
+              <Link href="/blog/1" className="ps-2 nav-link">Blogs</Link>
               <Nav.Link className="ps-2" href="#tutorials">Tutorials</Nav.Link>
             </Nav>
             <div className="col-md-1 px-2 col-xs-12 pb-2 pb-md-0">
