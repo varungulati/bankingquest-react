@@ -10,7 +10,7 @@ function NavbarComponent() {
   return (
       <div className="col-xs-12 col-md-12 row">
         <Navbar fixed="top" expand="lg" className="bg-body-tertiary">
-          <div className="col-xs-8 col-md-1 ms-2">
+          <div className="col-xs-8 col-md-2 col-xl-1 ms-2">
             <Navbar.Brand href="/">
               <Logo/>
             </Navbar.Brand>
@@ -33,10 +33,10 @@ function NavbarComponent() {
               <Link href="/blog/1" className="ps-2 nav-link">Blogs</Link>
               <Link href="/blog/1" className="ps-2 nav-link">Tutorials</Link>
             </Nav>
-            <div className="col-md-1 px-2 col-xs-12 pb-2 pb-md-0">
+            <div className="col-xs-12 col-md-2 col-xl-1 px-2 pb-2 pb-md-0">
               <LoginButton/>
             </div>
-            <div className="col-md-1 px-2">
+            <div className="col-md-2 col-xl-1 px-2">
               <RegisterButton/>
             </div>
           </Navbar.Collapse>
