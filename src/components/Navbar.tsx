@@ -34,9 +34,7 @@ const Navbar = () => {
         {/* Render hamburger menu only on small screens */}
         {width < 768 && (
           <TouchableOpacity style={styles.toggleButton} onPress={toggleCollapse}>
-            <FontAwesome name={menuIcon} size={24} color="black" >
-              {/* Use dynamic menu icon */}
-            </FontAwesome>
+            <FontAwesome name={menuIcon} size={24} color="black" />
           </TouchableOpacity>
         )}
         {/* Render menu items within navbar container on big screens or when not collapsed on small screens */}
@@ -72,11 +70,11 @@ const Navbar = () => {
           <TouchableOpacity style={styles.menuItem}>
             <Text>Contact</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.menuItem, styles.primaryButton]}>
-            <Text style={styles.buttonText}>Login</Text>
+          <TouchableOpacity style={[styles.menuItem, styles.fullWidthButton, styles.primaryButton]}>
+            <Text style={[styles.buttonText, styles.buttonTextSmall]}>Login</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.menuItem, styles.successButton]}>
-            <Text style={styles.buttonText}>Register</Text>
+          <TouchableOpacity style={[styles.menuItem, styles.fullWidthButton, styles.successButton]}>
+            <Text style={[styles.buttonText, styles.buttonTextSmall]}>Register</Text>
           </TouchableOpacity>
         </View>
       )}
@@ -89,7 +87,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingVertical: 10,
+    paddingVertical: 0,
     paddingHorizontal: 20,
   },
   logoContainer: {
@@ -97,7 +95,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: 120,
-    height: 60,
+    height: 50,
   },
   toggleButton: {
     padding: 10,
@@ -121,21 +119,41 @@ const styles = StyleSheet.create({
   },
   primaryButton: {
     backgroundColor: 'blue',
-    paddingHorizontal: 15,
+    paddingHorizontal: 20, // Add padding to the horizontal sides
     paddingVertical: 8,
     borderRadius: 5,
     marginVertical: 5,
+    minWidth: 100, // Set a fixed width for the buttons on large screens
+    alignItems: 'center', // Align text in the center
+    justifyContent: 'center', // Align text in the center
   },
   successButton: {
     backgroundColor: 'green',
+    paddingHorizontal: 20, // Add padding to the horizontal sides
+    paddingVertical: 8,
+    borderRadius: 5,
+    marginVertical: 5,
+    minWidth: 100, // Set a fixed width for the buttons on large screens
+    alignItems: 'center', // Align text in the center
+    justifyContent: 'center', // Align text in the center
+  },
+  fullWidthButton: {
     paddingHorizontal: 15,
     paddingVertical: 8,
     borderRadius: 5,
     marginVertical: 5,
+    width: '100%', // Set width to full width
+    alignItems: 'center', // Align text in the center
+    justifyContent: 'center', // Align text in the center
+    paddingRight: 15, // Add padding to the right side
+    paddingLeft: 15, // Add padding to the left side
   },
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
+  },
+  buttonTextSmall: {
+    fontSize: 14, // Reduce font size for small screens
   },
 });
 
