@@ -4,6 +4,5 @@ import Index from "./index";
 export default function IndexLayout() {
     return <>
         <Slot/>
-        <Index/>
     </>;
 }
