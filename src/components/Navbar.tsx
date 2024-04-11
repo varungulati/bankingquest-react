@@ -5,11 +5,12 @@ import { useWindowDimensions } from 'react-native';
 
 const Navbar = () => {
   const [collapsed, setCollapsed] = useState(true);
+  const [menuIcon, setMenuIcon] = useState('bars'); // State for menu icon
   const { width } = useWindowDimensions();
 
   useEffect(() => {
     if (width < 768) {
-      setCollapsed(true); // Collapsed on small screens
+      setCollapsed(false); // Collapsed on small screens
     } else {
       setCollapsed(false); // Expanded on big screens
     }
@@ -17,6 +18,7 @@ const Navbar = () => {
 
   const toggleCollapse = () => {
     setCollapsed(!collapsed);
+    setMenuIcon(collapsed ? 'bars' : 'times'); // Change menu icon when toggling collapse
   };
 
   return (
@@ -29,37 +31,22 @@ const Navbar = () => {
             resizeMode="contain"
           />
         </View>
-        {(collapsed || width < 768) && (
+        {/* Render hamburger menu only on small screens */}
+        {width < 768 && (
           <TouchableOpacity style={styles.toggleButton} onPress={toggleCollapse}>
-            <FontAwesome name={collapsed ? "bars" : "times"} size={24} color="black" />
+            <FontAwesome name={menuIcon} size={24} color="black" >
+              {/* Use dynamic menu icon */}
+            </FontAwesome>
           </TouchableOpacity>
         )}
-        {!collapsed && (
-          <View style={[styles.menuItems, width < 768 ? styles.verticalMenu : styles.horizontalMenu]}>
+        {/* Render menu items within navbar container on big screens or when not collapsed on small screens */}
+        {(collapsed && width < 768) || (!collapsed && width >= 768) && (
+          <View style={[styles.menuItems, styles.horizontalMenu]}>
             <TouchableOpacity style={styles.menuItem}>
               <Text>About</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.menuItem}>
-              <Text>Services</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}>
-              <Text>Contact</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={[styles.menuItem, styles.primaryButton]}>
-              <Text style={styles.buttonText}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={[styles.menuItem, styles.successButton]}>
-              <Text style={styles.buttonText}>Register</Text>
-            </TouchableOpacity>
-          </View>
-        )}
-        {collapsed && width < 768 && !collapsed && (
-          <View style={[styles.menuItems, styles.verticalMenu]}>
-            <TouchableOpacity style={styles.menuItem}>
-              <Text>About</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}>
-              <Text>Services</Text>
+              <Text>Service</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.menuItem}>
               <Text>Contact</Text>
@@ -73,6 +60,26 @@ const Navbar = () => {
           </View>
         )}
       </View>
+      {/* Render menu items outside navbar container on small screens */}
+      {collapsed && width < 768 && (
+        <View style={[styles.menuItems, styles.verticalMenu]}>
+          <TouchableOpacity style={styles.menuItem}>
+            <Text>About</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <Text>Service</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.menuItem}>
+            <Text>Contact</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.menuItem, styles.primaryButton]}>
+            <Text style={styles.buttonText}>Login</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.menuItem, styles.successButton]}>
+            <Text style={styles.buttonText}>Register</Text>
+          </TouchableOpacity>
+        </View>
+      )}
     </SafeAreaView>
   );
 };
