@@ -3,9 +3,12 @@ import { View, Text, StyleSheet, TouchableOpacity, Image, SafeAreaView } from 'r
 import { FontAwesome } from '@expo/vector-icons';
 import { useWindowDimensions } from 'react-native';
 
+// Define a type alias for icon names
+type IconName = 'bars' | 'times';
+
 const Navbar = () => {
   const [collapsed, setCollapsed] = useState(true);
-  const [menuIcon, setMenuIcon] = useState('bars'); // State for menu icon
+  const [menuIcon, setMenuIcon] = useState<IconName>('bars'); // State for menu icon
   const { width } = useWindowDimensions();
 
   useEffect(() => {
