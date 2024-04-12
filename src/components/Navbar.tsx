@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {
     View,
-    Text,
     StyleSheet,
     TouchableOpacity,
     Image,
@@ -11,6 +10,7 @@ import {FontAwesome} from '@expo/vector-icons';
 import {useWindowDimensions} from 'react-native';
 import LoginButton from './LoginButton';
 import RegisterButton from './RegisterButton';
+import NavMenuItems from "./NavMenuItems";
 
 // Define a type alias for icon names
 type IconName = 'bars' | 'times';
@@ -53,15 +53,7 @@ const Navbar = () => {
                 {/* Render menu items within navbar container on big screens or when not collapsed on small screens */}
                 {(collapsed && width < 768) || (!collapsed && width >= 768) && (
                     <View style={[styles.menuItems, styles.horizontalMenu]}>
-                        <TouchableOpacity style={styles.menuItem}>
-                            <Text>About</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.menuItem}>
-                            <Text>Service</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.menuItem}>
-                            <Text>Contact</Text>
-                        </TouchableOpacity>
+                        <NavMenuItems/>
                         {/* Pass styles as prop to LoginButton */}
                         <LoginButton onPress={() => {
                         }} styles={{
@@ -82,15 +74,7 @@ const Navbar = () => {
             {/* Render menu items outside navbar container on small screens */}
             {collapsed && width < 768 && (
                 <View style={[styles.menuItems, styles.verticalMenu]}>
-                    <TouchableOpacity style={styles.menuItem}>
-                        <Text>About</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.menuItem}>
-                        <Text>Service</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.menuItem}>
-                        <Text>Contact</Text>
-                    </TouchableOpacity>
+                    <NavMenuItems/>
                     {/* Pass styles as prop to LoginButton */}
                     <LoginButton onPress={() => {
                     }} styles={{
