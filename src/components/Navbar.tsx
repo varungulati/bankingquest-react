@@ -35,7 +35,7 @@ const Navbar = () => {
     };
 
     return (
-        <SafeAreaView style={{flex: 1}}>
+        <SafeAreaView>
             <View style={[styles.container, {backgroundColor: '#f2f2f2'}]}>
                 <View style={styles.logoContainer}>
                     <Link href="/">
