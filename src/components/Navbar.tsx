@@ -56,7 +56,7 @@ const Navbar = () => {
                 {/* Render menu items within navbar container on big screens or when not collapsed on small screens */}
                 {(collapsed && width < 768) || (!collapsed && width >= 768) && (
                     <View style={[styles.menuItems, styles.horizontalMenu]}>
-                        <NavMenuItems/>
+                        <NavMenuItems onPress={toggleCollapse}/>
                         {/* Pass styles as prop to LoginButton */}
                         <LoginButton styles={{
                             menuItem: styles.menuItem,
@@ -76,7 +76,7 @@ const Navbar = () => {
             {/* Render menu items outside navbar container on small screens */}
             {collapsed && width < 768 && (
                 <View style={[styles.menuItems, styles.verticalMenu]}>
-                    <NavMenuItems/>
+                    <NavMenuItems onPress={toggleCollapse}/>
                     {/* Pass styles as prop to LoginButton */}
                     <LoginButton styles={{
                         menuItem: styles.menuItem,
