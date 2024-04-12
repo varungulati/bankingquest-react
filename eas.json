@@ -14,7 +14,7 @@
       "ios": {
         "image": "latest"
       }
-    }
+    },
     "preview": {
       "distribution": "internal"
     },
