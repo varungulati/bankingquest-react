@@ -1,9 +1,6 @@
 import React from "react";
-import {NativeBaseProvider, Box} from "native-base";
-import Navbar from "../src/components/Navbar";
+import Home from "./(home)/home";
 
 export default function Index() {
-    return <NativeBaseProvider>
-        <Navbar/>
-    </NativeBaseProvider>;
+    return <Home/>;
 }

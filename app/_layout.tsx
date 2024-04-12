@@ -1,8 +1,9 @@
 import {Slot} from 'expo-router';
-import Index from "./index";
+import Navbar from "../src/components/Navbar";
 
 export default function IndexLayout() {
     return <>
+        <Navbar/>
         <Slot/>
     </>;
 }

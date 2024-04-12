@@ -11,6 +11,7 @@ import {useWindowDimensions} from 'react-native';
 import LoginButton from './LoginButton';
 import RegisterButton from './RegisterButton';
 import NavMenuItems from "./NavMenuItems";
+import {Link} from "expo-router";
 
 // Define a type alias for icon names
 type IconName = 'bars' | 'times';
@@ -37,11 +38,13 @@ const Navbar = () => {
         <SafeAreaView style={{flex: 1}}>
             <View style={[styles.container, {backgroundColor: '#f2f2f2'}]}>
                 <View style={styles.logoContainer}>
-                    <Image
-                        source={require('./logo.png')} // Change to your actual logo file path
-                        style={styles.logo}
-                        resizeMode="contain"
-                    />
+                    <Link href="/">
+                        <Image
+                            source={require('./logo.png')} // Change to your actual logo file path
+                            style={styles.logo}
+                            resizeMode="contain"
+                        />
+                    </Link>
                 </View>
                 {/* Render hamburger menu only on small screens */}
                 {width < 768 && (
