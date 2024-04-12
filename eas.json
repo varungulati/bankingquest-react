@@ -7,6 +7,14 @@
       "developmentClient": true,
       "distribution": "internal"
     },
+    "production": {
+      "android": {
+        "image": "latest"
+      },
+      "ios": {
+        "image": "latest"
+      }
+    }
     "preview": {
       "distribution": "internal"
     },
