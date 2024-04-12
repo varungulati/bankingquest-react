@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, SafeAreaView } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useWindowDimensions } from 'react-native';
+import LoginButton from './LoginButton'; // Import LoginButton component
 
 // Define a type alias for icon names
 type IconName = 'bars' | 'times';
@@ -52,9 +53,8 @@ const Navbar = () => {
             <TouchableOpacity style={styles.menuItem}>
               <Text>Contact</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[styles.menuItem, styles.primaryButton]}>
-              <Text style={styles.buttonText}>Login</Text>
-            </TouchableOpacity>
+            {/* Pass styles as prop to LoginButton */}
+            <LoginButton onPress={() => {}} styles={styles} />
             <TouchableOpacity style={[styles.menuItem, styles.successButton]}>
               <Text style={styles.buttonText}>Register</Text>
             </TouchableOpacity>
@@ -73,9 +73,8 @@ const Navbar = () => {
           <TouchableOpacity style={styles.menuItem}>
             <Text>Contact</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.menuItem, styles.fullWidthButton, styles.primaryButton]}>
-            <Text style={[styles.buttonText, styles.buttonTextSmall]}>Login</Text>
-          </TouchableOpacity>
+          {/* Pass styles as prop to LoginButton */}
+          <LoginButton onPress={() => {}} styles={styles} />
           <TouchableOpacity style={[styles.menuItem, styles.fullWidthButton, styles.successButton]}>
             <Text style={[styles.buttonText, styles.buttonTextSmall]}>Register</Text>
           </TouchableOpacity>
@@ -126,7 +125,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20, // Add padding to the horizontal sides
     paddingVertical: 8,
     borderRadius: 5,
-    marginVertical: 5,
     minWidth: 100, // Set a fixed width for the buttons on large screens
     alignItems: 'center', // Align text in the center
     justifyContent: 'center', // Align text in the center
@@ -136,7 +134,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20, // Add padding to the horizontal sides
     paddingVertical: 8,
     borderRadius: 5,
-    marginVertical: 5,
     minWidth: 100, // Set a fixed width for the buttons on large screens
     alignItems: 'center', // Align text in the center
     justifyContent: 'center', // Align text in the center
@@ -145,7 +142,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 8,
     borderRadius: 5,
-    marginVertical: 5,
     width: '100%', // Set width to full width
     alignItems: 'center', // Align text in the center
     justifyContent: 'center', // Align text in the center
