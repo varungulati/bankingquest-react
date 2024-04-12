@@ -5,7 +5,23 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "CLIENT_ID": "52931399118-4meesl46evvv6m4bb7ogfeo4sgbponke.apps.googleusercontent.com",
+        "REDIRECT_URI": "http://localhost:8081",
+        "APP_ICON": "./assets/icon.png",
+        "APP_NAME": "Banking Quest (Test)"
+      }
+    },
+    "staging": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "CLIENT_ID": "52931399118-4meesl46evvv6m4bb7ogfeo4sgbponke.apps.googleusercontent.com",
+        "REDIRECT_URI": "http://localhost:8081",
+        "APP_ICON": "./assets/icon.png",
+        "APP_NAME": "Banking Quest (Staging)"
+      }
     },
     "production": {
       "android": {
@@ -13,6 +29,12 @@
       },
       "ios": {
         "image": "latest"
+      },
+      "env": {
+        "CLIENT_ID": "52931399118-4meesl46evvv6m4bb7ogfeo4sgbponke.apps.googleusercontent.com",
+        "REDIRECT_URI": "http://localhost:8081",
+        "APP_ICON": "./assets/icon.png",
+        "APP_NAME": "Banking Quest"
       }
     },
     "preview": {
