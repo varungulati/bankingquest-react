@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "bankingquest-react",
+    "slug": "banking-quest",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "releaseChannel": "dev",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.bankingquest",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "logo": "./assets/logo.png",
+      "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "40edd05f-4797-46c0-a664-45a0e3de8aa2"
+      }
+    },
+    "owner": "varungulati",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/40edd05f-4797-46c0-a664-45a0e3de8aa2"
+    },
+    "scheme": "bankingquest-scheme",
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
