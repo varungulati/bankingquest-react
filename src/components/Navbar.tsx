@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, SafeAreaView } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useWindowDimensions } from 'react-native';
-import LoginButton from './LoginButton'; // Import LoginButton component
+import LoginButton from './LoginButton';
+import RegisterButton from './RegisterButton';
 
 // Define a type alias for icon names
 type IconName = 'bars' | 'times';
@@ -55,9 +56,8 @@ const Navbar = () => {
             </TouchableOpacity>
             {/* Pass styles as prop to LoginButton */}
             <LoginButton onPress={() => {}} styles={styles} />
-            <TouchableOpacity style={[styles.menuItem, styles.successButton]}>
-              <Text style={styles.buttonText}>Register</Text>
-            </TouchableOpacity>
+            {/* Pass styles as prop to RegisterButton */}
+            <RegisterButton onPress={() => {}} styles={styles} />
           </View>
         )}
       </View>
@@ -75,9 +75,8 @@ const Navbar = () => {
           </TouchableOpacity>
           {/* Pass styles as prop to LoginButton */}
           <LoginButton onPress={() => {}} styles={styles} />
-          <TouchableOpacity style={[styles.menuItem, styles.fullWidthButton, styles.successButton]}>
-            <Text style={[styles.buttonText, styles.buttonTextSmall]}>Register</Text>
-          </TouchableOpacity>
+          {/* Pass styles as prop to RegisterButton */}
+          <RegisterButton onPress={() => {}} styles={styles} />
         </View>
       )}
     </SafeAreaView>
