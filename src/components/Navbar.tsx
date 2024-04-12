@@ -55,8 +55,7 @@ const Navbar = () => {
                     <View style={[styles.menuItems, styles.horizontalMenu]}>
                         <NavMenuItems/>
                         {/* Pass styles as prop to LoginButton */}
-                        <LoginButton onPress={() => {
-                        }} styles={{
+                        <LoginButton styles={{
                             menuItem: styles.menuItem,
                             primaryButton: styles.primaryButton,
                             buttonText: styles.buttonText
@@ -76,8 +75,7 @@ const Navbar = () => {
                 <View style={[styles.menuItems, styles.verticalMenu]}>
                     <NavMenuItems/>
                     {/* Pass styles as prop to LoginButton */}
-                    <LoginButton onPress={() => {
-                    }} styles={{
+                    <LoginButton styles={{
                         menuItem: styles.menuItem,
                         primaryButton: styles.primaryButton,
                         buttonText: styles.buttonText,
