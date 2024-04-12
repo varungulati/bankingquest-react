@@ -115,7 +115,8 @@ const styles = StyleSheet.create({
   verticalMenu: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    marginTop: 10,
+    paddingRight: 20,
+    backgroundColor: '#f2f2f2'
   },
   primaryButton: {
     backgroundColor: 'blue',
