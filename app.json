@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "e570e4a9-4743-44b6-a323-1adc41dba89b"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e570e4a9-4743-44b6-a323-1adc41dba89b"
+    },
+    "android": {},
+    "ios": {},
+    "owner": "varungulati"
+  }
+}
