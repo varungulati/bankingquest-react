@@ -61,7 +61,7 @@ const config = {
         supportsTablet: true,
     },
     android: {
-        package: 'com.bankingquest',
+        package: 'com.bankingquest.client',
         versionCode: 1,
         adaptiveIcon: {
             foregroundImage: './assets/adaptive-icon.png',
