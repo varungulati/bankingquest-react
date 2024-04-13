@@ -5,11 +5,17 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "EXPO_ENV": "development"
+      }
     },
     "staging": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "EXPO_ENV": "staging"
+      }
     },
     "production": {
       "android": {
@@ -17,6 +23,9 @@
       },
       "ios": {
         "image": "latest"
+      },
+      "env": {
+        "EXPO_ENV": "production"
       }
     },
     "preview": {
