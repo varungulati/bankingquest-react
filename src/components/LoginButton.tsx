@@ -7,10 +7,11 @@ import {
     Alert
 } from 'react-native';
 import {useAuthRequest} from 'expo-auth-session';
-import AppConfig from '../../app.config';
+import config from '../../app.config.mjs';
 
-const CLIENT_ID = AppConfig[process.env.NODE_ENV].CLIENT_ID;
-const REDIRECT_URI = AppConfig[process.env.NODE_ENV].REDIRECT_URI;
+// Access the CLIENT_ID based on the current environment
+const CLIENT_ID = config.extra.CLIENT_ID;
+const REDIRECT_URI = config.extra.REDIRECT_URI;
 
 interface TextStyles {
     color?: string;
