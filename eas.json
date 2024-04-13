@@ -8,14 +8,16 @@
       "distribution": "internal",
       "env": {
         "EXPO_ENV": "development"
-      }
+      },
+      "channel": "development"
     },
     "staging": {
       "developmentClient": true,
       "distribution": "internal",
       "env": {
         "EXPO_ENV": "staging"
-      }
+      },
+      "channel": "staging"
     },
     "production": {
       "android": {
@@ -26,10 +28,12 @@
       },
       "env": {
         "EXPO_ENV": "production"
-      }
+      },
+      "channel": "production"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "preview"
     }
   },
   "submit": {
