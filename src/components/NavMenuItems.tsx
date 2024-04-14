@@ -21,7 +21,7 @@ const NavMenuItems = ({ onPress }) => {
                 </Link>
             </TouchableOpacity>
             <TouchableOpacity style={styles.menuItem} onPress={onPress}>
-                <Link href="/blog">
+                <Link href="/blogs">
                     <Text> Blogs</Text>
                 </Link>
             </TouchableOpacity>
