@@ -1,19 +1,22 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+
 
 const Home: React.FC = () => {
+
+
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>Hello World!</Text>
       <Text>This is the content of the Home component.</Text>
-    </View>
+
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
   },
   title: {
     fontSize: 24,
