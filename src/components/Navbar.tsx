@@ -10,6 +10,7 @@ import {FontAwesome} from '@expo/vector-icons';
 import {useWindowDimensions} from 'react-native';
 import LoginButton from './LoginButton';
 import RegisterButton from './RegisterButton';
+import Logo from './Logo';
 import NavMenuItems from "./NavMenuItems";
 import {Link} from "expo-router";
 
@@ -39,11 +40,7 @@ const Navbar = () => {
             <View style={[styles.container, {backgroundColor: '#f2f2f2'}]}>
                 <View style={styles.logoContainer}>
                     <Link href="/">
-                        <Image
-                            source={require('./logo.png')} // Change to your actual logo file path
-                            style={styles.logo}
-                            resizeMode="contain"
-                        />
+                        <Logo/>
                     </Link>
                 </View>
                 {/* Render hamburger menu only on small screens */}

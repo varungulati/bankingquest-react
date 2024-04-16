@@ -1,15 +1,15 @@
 import * as React from "react";
 import {StyleSheet, View, Text, Image} from "react-native";
 import {Color, FontFamily, FontSize} from "../GlobalStyles";
+import Logo from "./Logo";
 
 const Footer = () => {
     return (
         <View style={[styles.footerLayout]}>
             <View style={[styles.footerChild, styles.footerPosition]}/>
-            <Image
-                style={styles.bankingQuestLogo1Icon}
-                source={require("../assets/logo.png")}
-            />
+            <View style={styles.bankingQuestLogo1Icon}>
+                <Logo/>
+            </View>
             <View style={[styles.aboutUsParent, styles.parentLayout]}>
                 <Text style={[styles.aboutUs, styles.aboutUsFlexBox]}>About
                     Us</Text>
@@ -78,12 +78,10 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     bankingQuestLogo1Icon: {
-        top: 40,
+        top: 20,
         left: '50%', // Center the logo horizontally
-        width: 220,
-        height: 66,
         position: "absolute",
-        marginLeft: -110, // Adjust margin to center the logo
+        marginLeft: -60, // Adjust margin to center the logo
     },
     aboutUs: {
         fontFamily: FontFamily.subHeading3,
@@ -131,19 +129,19 @@ const styles = StyleSheet.create({
         top: 0,
     },
     aboutUsParent: {
-        top: 130,
+        top: 80,
         left: '50%', // Center horizontally
         width: 742,
         marginLeft: -371, // Adjust margin to center the container
     },
     copyrightBankingquestcom: {
-        top: 186,
+        top: 136,
         left: '50%', // Center horizontally
         fontSize: FontSize.footer_size,
         lineHeight: 22,
         fontFamily: FontFamily.footer,
         opacity: 0.6,
-        marginLeft: -82, // Adjust margin to center the text
+        marginLeft: -112, // Adjust margin to center the text
     },
     linkedinIcon: {
         left: 104,
@@ -155,7 +153,7 @@ const styles = StyleSheet.create({
         left: 0,
     },
     linkedinParent: {
-        top: 232,
+        top: 180,
         left: '50%', // Center horizontally
         width: 136,
         marginLeft: -68, // Adjust margin to center the container
