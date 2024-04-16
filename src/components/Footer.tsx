@@ -49,7 +49,7 @@ const Footer = () => {
 
 const styles = StyleSheet.create({
     footerLayout: {
-        height: 304,
+        height: 274,
         width: '100%', // Make the width responsive
     },
     footerPosition: {
