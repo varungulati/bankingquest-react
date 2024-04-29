@@ -2,7 +2,7 @@ import {useLocalSearchParams} from 'expo-router';
 import {Text} from 'react-native';
 
 export default function Blog() {
-    const {slug} = useLocalSearchParams();
+    const {blogID} = useLocalSearchParams();
 
-    return <><Text>Blog post: {slug}</Text></>;
+    return <><Text>Blog post: {blogID}</Text></>;
 }
