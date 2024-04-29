@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import BlogCard from "../../src/components/BlogCard";
 
-const Blogs: React.FC = () => {
+const Index: React.FC = () => {
     const {width} = useWindowDimensions();
     const isLargeScreen = width >= 768; // Define your breakpoint for large screens
 
@@ -120,4 +120,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Blogs;
+export default Index;

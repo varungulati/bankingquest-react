@@ -9,6 +9,6 @@ export default function IndexLayout() {
     return <>
         <Navbar/>
         <Slot/>
-              {windowWidth >= 600 ? <Footer /> : <FooterSmallScreen />}
+         {windowWidth >= 600 ? <Footer /> : <FooterSmallScreen />}
     </>;
 }
